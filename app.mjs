@@ -11,6 +11,10 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 
 // Route to get all products
+app.get('/', (req, res) => {
+    res.json({ msg: "Hello, World!" });
+});
+
 app.get('/api/products', (req, res) => {
     res.json(products);
 });
